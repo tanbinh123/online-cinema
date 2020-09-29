@@ -5,16 +5,15 @@ import static org.junit.Assert.assertTrue;
 import org.junit.Test;
 
 /**
- * Unit test for simple App.
+ * Unit test for simple Provider.
  */
-public class AppTest 
+public class ProviderTest
 {
     /**
      * Rigorous Test :-)
      */
     @Test
-    public void shouldAnswerWithTrue()
-    {
+    public void shouldAnswerWithTrue() {
         assertTrue( true );
     }
 }

@@ -11,7 +11,19 @@
        http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.0.xsd
        http://dubbo.apache.org/schema/dubbo http://dubbo.apache.org/schema/dubbo/dubbo.xsd">
 
-    <!-- 服务端口 -->
+    <!-- Supplier Application Info -->
+    <dubbo:application name="hello-world-app" />
+
+    <!-- Service Port -->
     <dubbo:protocol name="dubbo" port="20880" />
+
+    <!-- 声明需要暴露的服务接口 -->
+    <dubbo:service
+            registry="N/A"
+            interface="com.edwardlee.ServiceApi"
+            ref="demoService" />
+
+    <!-- 服务实现 -->
+    <bean id="demoService" class="com.edwardlee.impl.ServiceImpl" />
 
 </beans>
