@@ -11,6 +11,7 @@
        http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.0.xsd
        http://dubbo.apache.org/schema/dubbo http://dubbo.apache.org/schema/dubbo/dubbo.xsd">
 
-
+    <!-- 服务端口 -->
+    <dubbo:protocol name="dubbo" port="20880" />
 
 </beans>
