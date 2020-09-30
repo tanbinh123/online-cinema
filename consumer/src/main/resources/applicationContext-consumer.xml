@@ -14,11 +14,14 @@
     <!-- 消费者 应用名 -->
     <dubbo:application name="consumer-of-hello-world" />
 
+    <!-- zk 注册中心 -->
+    <dubbo:registry address="zookeeper://localhost:2181" />
+
     <!-- 生成远程服务代理，可以和本地bean一样使用demoService -->
     <dubbo:reference
             id="demoService"
             interface="com.edwardlee.ServiceApi"
-            url="dubbo://localhost:20880"
     />
+<!--    url="dubbo://localhost:20880"-->
 
 </beans>

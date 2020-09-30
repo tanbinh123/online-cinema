@@ -11,17 +11,20 @@
        http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.0.xsd
        http://dubbo.apache.org/schema/dubbo http://dubbo.apache.org/schema/dubbo/dubbo.xsd">
 
-    <!-- Supplier Application Info -->
+    <!-- Provider 应用名 -->
     <dubbo:application name="hello-world-app" />
 
-    <!-- Service Port -->
+    <!-- zk 注册中心 -->
+    <dubbo:registry address="zookeeper://localhost:2181" />
+
+    <!-- 端口 -->
     <dubbo:protocol name="dubbo" port="20880" />
 
     <!-- 声明需要暴露的服务接口 -->
     <dubbo:service
-            registry="N/A"
             interface="com.edwardlee.ServiceApi"
             ref="demoService" />
+    <!-- registry="N/A" -->
 
     <!-- 服务实现 -->
     <bean id="demoService" class="com.edwardlee.impl.ServiceImpl" />
